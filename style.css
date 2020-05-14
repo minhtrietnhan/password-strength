@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: hsl(285, 40%, 11%);
+  font-family: "Jost", sans-serif;
+  color: hsl(285, 80%, 75%);
+  text-align: center;
+}
+
+.container {
+  min-height: calc(100vh - 30px);
+}
+
+.hamburger {
+  position: absolute;
+  float: right;
+  background: blue;
+  width: 100%;
+  z-index: 3;
+}
+
+h1 {
+  margin: 100px 0 15px 0;
+  font-size: 50px;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.password-meter {
+  position: relative;
+  margin: 20px auto;
+  border: 4px solid hsl(285, 40%, 40%);
+  height: 50px;
+  width: 70%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.password-meter::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 50px;
+  width: calc(1% * var(--strength, 0));
+  /* background: hsl(285, 40%, 70%); */
+  background-image: linear-gradient(to right, yellow, red);
+  transition: width 200ms;
+}
+
+.password-input {
+  margin: 20px;
+  background: hsl(285, 40%, 20%);
+  border: 2px solid hsl(280, 40%, 30%);
+  height: 40px;
+  width: 40%;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+}
+
+.password-input:focus {
+  border-color: hsl(285, 40%, 60%);
+}
+
+.reasons > * {
+  font-size: 25px;
+  margin: 5px;
+  color: hsl(280, 40%, 80%);
+}
+
+.blinking-animation {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  --animate-repeat: 1;
+}
+
+@keyframes blink {
+  0% {
+    border-color: hsl(285, 40%, 40%);
+  }
+  50% {
+    border-color: hsl(2, 96%, 53%);
+  }
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px auto;
+}
+
+.info-container .radio-btn {
+  background: red;
+  border: 3px solid hsl(285, 40%, 60%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.number-of-character {
+  border: 2px solid hsl(285, 40%, 60%);
+  margin: 5px auto;
+  width: 200px;
+}
+
+.no-of-characters {
+  margin: 10px;
+}
+
+footer {
+  height: 20px;
+}

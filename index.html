@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <header>
+      <div class="hamburger animate__fadeIn animate__animated">
+        <div id="bar-1"></div>
+        <div id="bar-2"></div>
+        <div id="bar-3"></div>
+      </div>
+    </header> -->
+
+    <div class="container">
+      <h1 class="animate__animated animate__backInDown">
+        Password Strength Meter
+      </h1>
+      <p class="animate__animated animate__backInLeft">
+        Try a password to see if it is secure enough!
+      </p>
+      <div class="password-meter" id="password-meter"></div>
+      <div
+        class="info-container animate__fadeIn animate__animated animate__delay-1s"
+      >
+        <div class="upper-case">
+          <div class="radio-btn" id="radio-btn-upper"></div>
+          <span id="upper-qty">No Uppercases</span>
+        </div>
+        <div class="lower-case">
+          <div class="radio-btn" id="radio-btn-lower"></div>
+          <span id="lower-qty">No Lowercases</span>
+        </div>
+        <div class="digits">
+          <div class="radio-btn" id="radio-btn-digits"></div>
+          <span id="digits-qty">No Digits</span>
+        </div>
+        <div class="symbols">
+          <div class="radio-btn" id="radio-btn-symbols"></div>
+          <span id="symbols-qty">No Symbols</span>
+        </div>
+      </div>
+      <div
+        class="number-of-character animate__fadeIn animate__animated animate__delay-1s"
+      >
+        <div class="no-of-characters" id="no-of-characters">No Characters</div>
+      </div>
+      <input
+        type="text"
+        class="password-input animate__fadeIn animate__animated animate__delay-1s"
+        id="password-input"
+        autofocus
+        value=""
+        placeholder="Type a password"
+      />
+      <div class="reasons" id="reasons"></div>
+    </div>
+
+    <footer>
+      <div>Minh Triet Nhan &copy; 2020</div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
